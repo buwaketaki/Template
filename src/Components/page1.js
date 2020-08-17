@@ -6,7 +6,8 @@ import logo from "../images/logo.png";
 import More from "../images/More.png";
 import Mask from "../images/Mask.png";
 import photoBorder from "../images/photoBorder.png";
-
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 function Page() {
   const [date, setDate] = useState(new Date());
   const onChange = (date) => {
@@ -21,9 +22,6 @@ function Page() {
           <div className="mountains">
             <img width="100%" src={Mask}></img>
           </div>
-          {/* <div className="border">
-            <img src={photoBorder}></img>
-          </div> */}
           <div className="profileBar">
             <div
               style={{
@@ -202,7 +200,6 @@ function Page() {
             </div>
           </div>
           <div className="cardList">
-            {/* <div className="p-2 flex-fill bd-highlight col-example"> */}{" "}
             <div className="cards">
               <img
                 height="145"
@@ -211,8 +208,6 @@ function Page() {
               ></img>
               <div className="myHeartTitle">Counselling Annie Ray</div>
             </div>
-            {/* </div>
-          <div className="p-2 flex-fill bd-highlight col-example "> */}{" "}
             <div className="cards">
               <div className="blueBox">
                 <h3>
@@ -224,13 +219,6 @@ function Page() {
                 </h3>
               </div>
               <div className="myHeartTitle">Deep Relaxation</div>
-              {/* <img
-                height="130"
-                
-                style={{ borderRadius: "25px" }}
-                src="https://s3-alpha-sig.figma.com/img/6ca9/510f/a19f243859fc31737fb97f590b8f33ec?Expires=1598227200&Signature=WHhLbYUSwD4az4ljtTvYjwsKnAwIe60s8VKq3NXqqYUMZfpv0i~vZb3ka0qs-R8cKVkbb6H3K6~CG8YlCDQRBPHo0LIcMi~MuJXGBJnQ22hKLUnbarTRG8Z-SV43l-8i0bfiEl5H-embtUBrpOSIrjIIDnUenmf8LqBKXRnaj0IVm9UdjpSGpZ1A0jvdsWFwS7YjA3pyA0UP52JIXx~mk13OyNKU5QDTbZWemT8f2ZskMe-8e-Kk6rgji0FWo3X3B9BAvsRba3vPKNT8eSDgl9ES3Glazm1a1RrEuErn0q5VbBMa2Bxcn2DoqeQorSin0oo5yaluVMPBk32h1A0PAA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-              ></img> */}
-              {/* </div> */}
             </div>
           </div>
           <div
@@ -332,12 +320,6 @@ function Page() {
                 }
               }}
 
-              // tileDisabled={({ date }) => date.getDay() === 0}
-
-              // /*maxDate={new Date(2020, 1, 0)}</div>*/
-              //  minDate={
-              //   new Date()
-              // }
             />
           </div>
           <div className="preferences">
@@ -351,12 +333,56 @@ function Page() {
               Upcoming
             </div>
           </div>
-          <div className="fullscreenFormat">
             <div>
               <div className="today">Today</div>
-              <div className="cardList">
-                {/* <div className="p-2 flex-fill bd-highlight col-example"> */}{" "}
-                <div className="cards">
+              <Carousel
+  additionalTransfrom={0}
+  arrows
+  autoPlaySpeed={3000}
+  centerMode={false}
+  className=""
+  containerClass="container-with-dots"
+  dotListClass=""
+  draggable
+  focusOnSelect={false}
+  infinite
+  itemClass=""
+  keyBoardControl
+  minimumTouchDrag={80}
+  renderButtonGroupOutside={false}
+  renderDotsOutside={false}
+  responsive={{
+    desktop: {
+      breakpoint: {
+        max: 3000,
+        min: 1024
+      },
+      items: 2,
+      partialVisibilityGutter: 40
+    },
+    mobile: {
+      breakpoint: {
+        max: 464,
+        min: 0
+      },
+      items: 2,
+      partialVisibilityGutter: 30
+    },
+    tablet: {
+      breakpoint: {
+        max: 1024,
+        min: 464
+      },
+      items: 2,
+      partialVisibilityGutter: 30
+    }
+  }}
+  showDots={false}
+  sliderClass=""
+  slidesToSlide={1}
+  swipeable
+>
+  <div className="cardPosition"> <div className="cards">
                   <div className="Pbox" style={{ margin: "0" }}>
                     <div className="pboxText"> Yoga Class</div>
                     <div className="pboxText">M-W-F</div>
@@ -374,18 +400,13 @@ function Page() {
                       ></i>
                     </div>
                   </div>
-                </div>
-                {/* </div>
-          <div className="p-2 flex-fill bd-highlight col-example "> */}{" "}
-                <div className="cards">
-                  {/* <img
-               
-               height="110"
-                style={{ borderRadius: "25px" }}
-                src="https://i.pinimg.com/originals/d0/85/5d/d0855d1ef628012eeeeaf8b4a7eb701e.jpg"
-              ></img> */}
-                  <div className="Pbox" style={{ margin: "0" }}></div>
-                  <div className="Tstyling pl-3">
+                </div></div>
+                <div className="cardPosition"> <div className="cards">
+                  <div className="Pbox" style={{ margin: "0" }}>
+                    <div className="pboxText"> Yoga Class</div>
+                    <div className="pboxText">M-W-F</div>
+                  </div>
+                  <div className="Tstyling ">
                     <div className="t1">Yoga Teacher :</div>
                     <div className="t2">
                       <b> Andy Allen</b>
@@ -398,9 +419,68 @@ function Page() {
                       ></i>
                     </div>
                   </div>
-                </div>
-              </div>
-
+                </div></div>
+             
+                <div  className="cardPosition"> <div className="cards">
+                  <div className="Pbox" style={{ margin: "0" }}>
+                    <div className="pboxText"> Yoga Class</div>
+                    <div className="pboxText">M-W-F</div>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Andy Allen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div></div>
+                <div  className="cardPosition"> <div className="cards">
+                  <div className="Pbox" style={{ margin: "0" }}>
+                    <div className="pboxText"> Yoga Class</div>
+                    <div className="pboxText">M-W-F</div>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Andy Allen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div></div>
+                <div  className="cardPosition"> <div className="cards">
+                  <div className="Pbox" style={{ margin: "0" }}>
+                    <div className="pboxText"> Yoga Class</div>
+                    <div className="pboxText">M-W-F</div>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Andy Allen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div></div>
+</Carousel>;
+ 
+              
               <div className="today">Tomorrow</div>
               <div className="d-flex bd-highlight example-parent">
                 {" "}
@@ -478,8 +558,6 @@ function Page() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="fullscreenFormat pl-2">
             <div>
               <div className="preferences">
                 <div style={{ textAlign: "center", width: "100%" }}>
@@ -494,7 +572,6 @@ function Page() {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    // padding: "4px 14px",
                     marginTop: "16px",
                     width: "100px",
                     height: "35px",
@@ -522,7 +599,6 @@ function Page() {
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    // padding: "4px 14px",
                     marginTop: "16px",
                     width: "100px",
                     height: "35px",
@@ -544,16 +620,56 @@ function Page() {
                   </div>
                 </div>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "spaceBetween",
-                }}
-              >
-                <div className="d-flex bd-highlight example-parent">
-                  <div className="p-2 flex-fill bd-highlight col-example">
-                    <div className="Bbox">
+                           
+            <Carousel
+  additionalTransfrom={0}
+  arrows
+  autoPlaySpeed={3000}
+  centerMode={false}
+  className=""
+  containerClass="container-with-dots"
+  dotListClass=""
+  draggable
+  focusOnSelect={false}
+  infinite
+  itemClass=""
+  keyBoardControl
+  minimumTouchDrag={80}
+  renderButtonGroupOutside={false}
+  renderDotsOutside={false}
+  responsive={{
+    desktop: {
+      breakpoint: {
+        max: 3000,
+        min: 1024
+      },
+      items: 2,
+      partialVisibilityGutter: 40
+    },
+    mobile: {
+      breakpoint: {
+        max: 464,
+        min: 0
+      },
+      items: 2,
+      partialVisibilityGutter: 30
+    },
+    tablet: {
+      breakpoint: {
+        max: 1024,
+        min: 464
+      },
+      items: 2,
+      partialVisibilityGutter: 30
+    }
+  }}
+  showDots={false}
+  sliderClass=""
+  slidesToSlide={1}
+  swipeable
+>
+  <div className="cardPosition"> <div className="cards">
+  <div className="Bbox">
                       <h3>
                         <i
                           class="fas fa-play"
@@ -563,10 +679,9 @@ function Page() {
                       </h3>
                     </div>
                     <div className="audiosLabel pl-1">Music for kids</div>
-                  </div>
-                  <div className="p-2 flex-fill bd-highlight col-example">
-                    {" "}
-                    <div className="Pbox">
+                </div></div>
+                <div  className="cardPosition"> <div className="cards">
+                <div className="Pbox">
                       <h3>
                         <i
                           class="fas fa-play"
@@ -575,12 +690,31 @@ function Page() {
                         ></i>
                       </h3>
                     </div>
-                    <div className="audiosLabel pl-3">Music for kids</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                    <div className="audiosLabel pl-1">Music for kids</div>                </div></div>
+                    <div className="cardPosition"> <div className="cards">
+  <div className="Bbox">
+                      <h3>
+                        <i
+                          class="fas fa-play"
+                          style={{ color: "white" }}
+                          color="white"
+                        ></i>
+                      </h3>
+                    </div>
+                    <div className="audiosLabel pl-1">Music for kids</div>
+                </div></div>
+                <div  className="cardPosition"> <div className="cards">
+                <div className="Pbox">
+                      <h3>
+                        <i
+                          class="fas fa-play"
+                          style={{ color: "white" }}
+                          color="white"
+                        ></i>
+                      </h3>
+                    </div>
+                    <div className="audiosLabel pl-1">Music for kids</div>                </div></div>
+</Carousel>; </div>
           <div className="fullscreenFormat ">
             <div>
               <div className="audios pl-2">Personalised</div>
@@ -590,7 +724,6 @@ function Page() {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    // padding: "4px 14px",
                     marginTop: "16px",
                     width: "100px",
                     height: "35px",
@@ -618,7 +751,6 @@ function Page() {
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    // padding: "4px 14px",
                     marginTop: "16px",
                     width: "100px",
                     height: "35px",
@@ -710,7 +842,6 @@ function Page() {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    // padding: "4px 14px",
                     marginTop: "16px",
                     width: "100px",
                     height: "35px",
@@ -738,7 +869,6 @@ function Page() {
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    // padding: "4px 14px",
                     marginTop: "16px",
                     width: "100px",
                     height: "35px",
@@ -824,7 +954,6 @@ function Page() {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    // padding: "4px 0px",
                     marginTop: "16px",
                     width: "100px",
                     height: "35px",
@@ -875,7 +1004,6 @@ function Page() {
                   </div>
                 </div>
               </div>
-              {/* <div style={{display:"flex", flexDirection:"row", justifyContent:"spaceBetween"}}> */}
               <div className="cardList">
                 <div
                   style={{
@@ -915,8 +1043,6 @@ function Page() {
                   <div className="imgTit">studio</div>
                 </div>
               </div>
-              {/* </div> */}
-              {/* foodie */}
               <div className="audios pl-2" style={{ width: "maxContent" }}>
                 Foodie
               </div>
@@ -926,7 +1052,6 @@ function Page() {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    // padding: "4px 0px",
                     marginTop: "16px",
                     width: "100px",
                     height: "35px",
@@ -976,7 +1101,6 @@ function Page() {
                   </div>
                 </div>
               </div>
-              {/* <div style={{display:"flex", flexDirection:"row", justifyContent:"spaceBetween"}}> */}
               <div className="cardList">
                 <div
                   style={{
@@ -1016,8 +1140,6 @@ function Page() {
                   <div className="imgTit">item name</div>
                 </div>
               </div>
-              {/* </div> */}
-              {/* products */}
               <div className="audios pl-2" style={{ width: "maxContent" }}>
                 Products
               </div>
@@ -1027,7 +1149,6 @@ function Page() {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    // padding: "4px 0px",
                     marginTop: "16px",
                     width: "100px",
                     height: "35px",
@@ -1077,7 +1198,6 @@ function Page() {
                   </div>
                 </div>
               </div>
-              {/* <div style={{display:"flex", flexDirection:"row", justifyContent:"spaceBetween"}}> */}
               <div className="cardList">
                 <div
                   style={{
@@ -1097,7 +1217,6 @@ function Page() {
                   ></img>
                   <div className="imgTit">Name of Product</div>
                 </div>
-                {/*  */}
                 <div
                   style={{
                     display: "flex",
@@ -1117,8 +1236,6 @@ function Page() {
                   <div className="imgTit">Name of Product</div>
                 </div>
               </div>
-              {/* </div> */}
-              {/* restaurant */}
               <div className="audios pl-2" style={{ width: "maxContent" }}>
                 Restaurant
               </div>
@@ -1128,7 +1245,6 @@ function Page() {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    // padding: "4px 0px",
                     marginTop: "16px",
                     width: "100px",
                     height: "35px",
@@ -1178,7 +1294,6 @@ function Page() {
                   </div>
                 </div>
               </div>
-              {/* <div style={{display:"flex", flexDirection:"row", justifyContent:"center", width:"100%"}}> */}
               <div className="cardList">
                 <div
                   style={{
@@ -1219,7 +1334,6 @@ function Page() {
                   <div className="imgTit">Restaurant name</div>
                 </div>
               </div>
-              {/* </div> */}
             </div>
           </div>
           <div className="fullscreenFormat">
