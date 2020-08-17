@@ -200,8 +200,8 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   background: linear-gradient(114.99deg, #27bbf1 16.45%, #d6f4ff 100%);
   margin-top: 16px;
   border-radius: 12px;
@@ -223,6 +223,24 @@ width: 100%;
   background: linear-gradient(99.96deg, #f19ca7 0%, #ffd0ae 100%);
 
   border-radius: 12px;
+}
+.audios2{
+  display: flex;
+  direction: row;
+  justify-content: space-between;
+  height: 10px;
+  margin-top: 5px;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 12px;
+
+  letter-spacing: 0.01em;
+
+
+  color: #101f2d;
+
 }
 .audios {
   height: 13px;
@@ -282,9 +300,10 @@ letter-spacing: 0.01em;
 
 margin-top: 10px;
 color: #101F2D;
+
 }
-.blueBox {
-  font-family: ABeeZee;
+.blueBox3{
+  font-family:'Gilroy';
   font-style: italic;
   font-weight: normal;
   font-size: 18px;
@@ -299,8 +318,28 @@ color: #101F2D;
   align-items: center;
   background: linear-gradient(118.1deg, #5570f7 17.85%, #a38cff 87.43%);
   border-radius: 12px;
-  width: 160px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
+  margin-top: 16px;
+}
+.blueBox {
+  font-family:'Gilroy';
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 120%;
+
+  letter-spacing: 0.01em;
+
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(118.1deg, #5570f7 17.85%, #a38cff 87.43%);
+  border-radius: 12px;
+  width: 190px;
+  height: 190px;
   margin-top: 16px;
 }
 .likedButton{display: flex;
@@ -332,8 +371,8 @@ color: #101F2D;
   align-items: center;
   background: linear-gradient(114.99deg, #27bbf1 16.45%, #d6f4ff 100%);
   border-radius: 12px;
-  width: 160px;
-  height: 140px;
+  width: 190px;
+  height: 190px;
   margin-top: 16px;
 }
 .imgTit{
@@ -684,30 +723,40 @@ width: max-content;
     margin-left: 4px;
   }
   .blueBox {
-    width: 120px;
+    width: 130px;
+    height: 130px;
   }
   .blueBox2 {
-    width: 120px;
+    width: 130px;
+    height: 130px;
   }
   .Bbox {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
   }
   .Pbox {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
   }
 }
 @media  (max-width:375px) and (min-width: 321px) {
 .imgStyle{border-radius: 50%; }
 .Pbox {
-  /* margin-left: 15px; */
-  height: 170px;
-  width :170px;
+ 
+  height: 160px;
+  width :160px;
 }
 .Bbox{
-  width: 170px;
-  height: 170px;
+  width: 160px;
+    height: 160px;
+}
+.blueBox{
+  width: 160px;
+    height: 160px;
+}
+.blueBox2{
+  width: 160px;
+    height: 160px;
 }
 }
 @media (min-width:377px){
@@ -719,8 +768,8 @@ width: max-content;
     justify-content: center;
   }
   .Pbox{
-    width: 200px;
-  height: 200px;
+    width: 190px;
+  height: 190px;
   }
 }
 

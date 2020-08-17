@@ -6,10 +6,30 @@ import logo from "../images/logo.png";
 import More from "../images/More.png";
 import Mask from "../images/Mask.png";
 import photoBorder from "../images/photoBorder.png";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { Button, Accordion, Card } from "react-bootstrap";
+import { MDBIcon } from "mdbreact";
+
 function Page() {
+  const [Open1, setOpen1] = useState(true);
+  const [Open2, setOpen2] = useState(true);
+  const [Open3, setOpen3] = useState(true);
+  const [Open4, setOpen4] = useState(true);
   const [date, setDate] = useState(new Date());
+
+  const openClose1 = () => {
+    setOpen1(!Open1);
+  };
+  const openClose2 = () => {
+    setOpen2(!Open2);
+  };
+  const openClose3 = () => {
+    setOpen3(!Open3);
+  };
+  const openClose4 = () => {
+    setOpen4(!Open4);
+  };
   const onChange = (date) => {
     setDate(date);
   };
@@ -25,7 +45,7 @@ function Page() {
           <div className="profileBar">
             <div
               style={{
-                position:"absolute",
+                position: "absolute",
                 color: "white",
                 marginTop: "5px",
                 marginLeft: "10px",
@@ -199,6 +219,7 @@ function Page() {
               My Heart
             </div>
           </div>
+
           <div className="cardList">
             <div className="cards">
               <img
@@ -209,7 +230,7 @@ function Page() {
               <div className="myHeartTitle">Counselling Annie Ray</div>
             </div>
             <div className="cards">
-              <div className="blueBox">
+              <div className="blueBox3">
                 <h3>
                   <i
                     class="fas fa-play"
@@ -221,6 +242,7 @@ function Page() {
               <div className="myHeartTitle">Deep Relaxation</div>
             </div>
           </div>
+
           <div
             className="d-flex justify-content-start"
             style={{
@@ -319,7 +341,6 @@ function Page() {
                   return "highlight";
                 }
               }}
-
             />
           </div>
           <div className="preferences">
@@ -333,187 +354,274 @@ function Page() {
               Upcoming
             </div>
           </div>
-            <div>
-              <div className="today">Today</div>
-              <Carousel
-  additionalTransfrom={0}
-  arrows
-  autoPlaySpeed={3000}
-  centerMode={false}
-  className=""
-  containerClass="container-with-dots"
-  dotListClass=""
-  draggable
-  focusOnSelect={false}
-  infinite
-  itemClass=""
-  keyBoardControl
-  minimumTouchDrag={80}
-  renderButtonGroupOutside={false}
-  renderDotsOutside={false}
-  responsive={{
-    desktop: {
-      breakpoint: {
-        max: 3000,
-        min: 1024
-      },
-      items: 2,
-      partialVisibilityGutter: 40
-    },
-    mobile: {
-      breakpoint: {
-        max: 464,
-        min: 0
-      },
-      items: 2,
-      partialVisibilityGutter: 30
-    },
-    tablet: {
-      breakpoint: {
-        max: 1024,
-        min: 464
-      },
-      items: 2,
-      partialVisibilityGutter: 30
-    }
-  }}
-  showDots={false}
-  sliderClass=""
-  slidesToSlide={1}
-  swipeable
->
-  <div className="cardPosition"> <div className="cards">
-                  <div className="Pbox" style={{ margin: "0" }}>
-                    <div className="pboxText"> Yoga Class</div>
-                    <div className="pboxText">M-W-F</div>
-                  </div>
-                  <div className="Tstyling ">
-                    <div className="t1">Yoga Teacher :</div>
-                    <div className="t2">
-                      <b> Andy Allen</b>
-                    </div>
-                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
-                    <div className="t4">
-                      <i
-                        style={{ color: "orange" }}
-                        class="fas fa-calendar-alt"
-                      ></i>
-                    </div>
-                  </div>
-                </div></div>
-                <div className="cardPosition"> <div className="cards">
-                  <div className="Pbox" style={{ margin: "0" }}>
-                    <div className="pboxText"> Yoga Class</div>
-                    <div className="pboxText">M-W-F</div>
-                  </div>
-                  <div className="Tstyling ">
-                    <div className="t1">Yoga Teacher :</div>
-                    <div className="t2">
-                      <b> Andy Allen</b>
-                    </div>
-                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
-                    <div className="t4">
-                      <i
-                        style={{ color: "orange" }}
-                        class="fas fa-calendar-alt"
-                      ></i>
-                    </div>
-                  </div>
-                </div></div>
-             
-                <div  className="cardPosition"> <div className="cards">
-                  <div className="Pbox" style={{ margin: "0" }}>
-                    <div className="pboxText"> Yoga Class</div>
-                    <div className="pboxText">M-W-F</div>
-                  </div>
-                  <div className="Tstyling ">
-                    <div className="t1">Yoga Teacher :</div>
-                    <div className="t2">
-                      <b> Andy Allen</b>
-                    </div>
-                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
-                    <div className="t4">
-                      <i
-                        style={{ color: "orange" }}
-                        class="fas fa-calendar-alt"
-                      ></i>
-                    </div>
-                  </div>
-                </div></div>
-                <div  className="cardPosition"> <div className="cards">
-                  <div className="Pbox" style={{ margin: "0" }}>
-                    <div className="pboxText"> Yoga Class</div>
-                    <div className="pboxText">M-W-F</div>
-                  </div>
-                  <div className="Tstyling ">
-                    <div className="t1">Yoga Teacher :</div>
-                    <div className="t2">
-                      <b> Andy Allen</b>
-                    </div>
-                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
-                    <div className="t4">
-                      <i
-                        style={{ color: "orange" }}
-                        class="fas fa-calendar-alt"
-                      ></i>
-                    </div>
-                  </div>
-                </div></div>
-                <div  className="cardPosition"> <div className="cards">
-                  <div className="Pbox" style={{ margin: "0" }}>
-                    <div className="pboxText"> Yoga Class</div>
-                    <div className="pboxText">M-W-F</div>
-                  </div>
-                  <div className="Tstyling ">
-                    <div className="t1">Yoga Teacher :</div>
-                    <div className="t2">
-                      <b> Andy Allen</b>
-                    </div>
-                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
-                    <div className="t4">
-                      <i
-                        style={{ color: "orange" }}
-                        class="fas fa-calendar-alt"
-                      ></i>
-                    </div>
-                  </div>
-                </div></div>
-</Carousel>;
- 
-              
-              <div className="today">Tomorrow</div>
-              <div className="d-flex bd-highlight example-parent">
+          <div>
+            <div className="today">Today</div>
+            <Carousel
+              additionalTransfrom={0}
+              arrows
+              autoPlaySpeed={3000}
+              centerMode={false}
+              className=""
+              containerClass="container-with-dots"
+              dotListClass=""
+              draggable
+              focusOnSelect={false}
+              infinite
+              itemClass=""
+              keyBoardControl
+              minimumTouchDrag={80}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              responsive={{
+                desktop: {
+                  breakpoint: {
+                    max: 3000,
+                    min: 1024,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 40,
+                },
+                mobile: {
+                  breakpoint: {
+                    max: 464,
+                    min: 0,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 30,
+                },
+                tablet: {
+                  breakpoint: {
+                    max: 1024,
+                    min: 464,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 30,
+                },
+              }}
+              showDots={false}
+              sliderClass=""
+              slidesToSlide={1}
+              swipeable
+            >
+              <div className="cardPosition">
                 {" "}
-                <div
-                  style={{
-                    height: "195px",
-                    width: "220px",
-                    borderRadius: "25px",
-                    border: "2px solid #5B86E5",
-                    marginLeft: "10px",
-                  }}
-                >
-                  <h6 style={{ marginTop: "40%", textAlign: "center" }}>
-                    {" "}
-                    No appoinments
-                  </h6>
+                <div className="cards">
+                  <div className="Pbox" style={{ margin: "0" }}>
+                    <div className="pboxText"> Yoga Class</div>
+                    <div className="pboxText">M-W-F</div>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Andy Allen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Pbox" style={{ margin: "0" }}>
+                    <div className="pboxText"> Yoga Class</div>
+                    <div className="pboxText">M-W-F</div>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Andy Allen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="d-flex flex-row" style={{ marginTop: "16px" }}>
-                <div className="dateTags1 p-2">
-                  <div className="date1">Wed, Jun 17</div>
-                </div>
-                <div className="dateTag2 p-2" style={{}}>
-                  <div className="date2">Thrus, Jun 18</div>
-                </div>
-                <div className="dateTag2 p-2">
-                  <div className="date2">Fri, Jun 19</div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Pbox" style={{ margin: "0" }}>
+                    <div className="pboxText"> Yoga Class</div>
+                    <div className="pboxText">M-W-F</div>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Andy Allen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="d-flex bd-highlight example-parent">
-                <div className="p-2 flex-fill bd-highlight col-example">
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Pbox" style={{ margin: "0" }}>
+                    <div className="pboxText"> Yoga Class</div>
+                    <div className="pboxText">M-W-F</div>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Andy Allen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Pbox" style={{ margin: "0" }}>
+                    <div className="pboxText"> Yoga Class</div>
+                    <div className="pboxText">M-W-F</div>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Andy Allen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Carousel>
+
+            <div className="today">Tomorrow</div>
+            <div className="d-flex bd-highlight example-parent">
+              {" "}
+              <div
+                style={{
+                  height: "195px",
+                  width: "220px",
+                  borderRadius: "25px",
+                  border: "2px solid #5B86E5",
+                  marginLeft: "10px",
+                }}
+              >
+                <h6 style={{ marginTop: "40%", textAlign: "center" }}>
                   {" "}
+                  No appoinments
+                </h6>
+              </div>
+            </div>
+
+            <div className="d-flex flex-row" style={{ marginTop: "16px" }}>
+              <div className="dateTags1 p-2">
+                <div className="date1">Wed, Jun 17</div>
+              </div>
+              <div className="dateTag2 p-2" style={{}}>
+                <div className="date2">Thrus, Jun 18</div>
+              </div>
+              <div className="dateTag2 p-2">
+                <div className="date2">Fri, Jun 19</div>
+              </div>
+            </div>
+
+            <Carousel
+              additionalTransfrom={0}
+              arrows
+              autoPlaySpeed={3000}
+              centerMode={false}
+              className=""
+              containerClass="container-with-dots"
+              dotListClass=""
+              draggable
+              focusOnSelect={false}
+              infinite
+              itemClass=""
+              keyBoardControl
+              minimumTouchDrag={80}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              responsive={{
+                desktop: {
+                  breakpoint: {
+                    max: 3000,
+                    min: 1024,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 40,
+                },
+                mobile: {
+                  breakpoint: {
+                    max: 464,
+                    min: 0,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 30,
+                },
+                tablet: {
+                  breakpoint: {
+                    max: 1024,
+                    min: 464,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 30,
+                },
+              }}
+              showDots={false}
+              sliderClass=""
+              slidesToSlide={1}
+              swipeable
+            >
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="blueBox2">
+                    <h6 style={{ textAlign: "center", color: "white" }}>
+                      {" "}
+                      Breath Work
+                    </h6>
+                  </div>
+                  <div className="Tstyling">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Mandy Mallen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>{" "}
+                </div>
+              </div>
+
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
                   <div className="blueBox">
                     <h6 style={{ textAlign: "center", color: "white" }}>
                       {" "}
@@ -534,8 +642,10 @@ function Page() {
                     </div>
                   </div>
                 </div>
-                <div className="p-2 flex-fill bd-highlight col-example ">
-                  {" "}
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
                   <div className="blueBox2">
                     <h6 style={{ textAlign: "center", color: "white" }}>
                       {" "}
@@ -554,786 +664,1188 @@ function Page() {
                         class="fas fa-calendar-alt"
                       ></i>
                     </div>
+                  </div>{" "}
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="blueBox">
+                    <h6 style={{ textAlign: "center", color: "white" }}>
+                      {" "}
+                      Meditation Class
+                    </h6>
                   </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Andy Allen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="blueBox">
+                    <h6 style={{ textAlign: "center", color: "white" }}>
+                      {" "}
+                      Meditation Class
+                    </h6>
+                  </div>
+                  <div className="Tstyling">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Mandy Mallen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>{" "}
+                </div>
+              </div>
+            </Carousel>
+            <div className="d-flex bd-highlight example-parent">
+              <div className="p-2 flex-fill bd-highlight col-example"> </div>
+              <div className="p-2 flex-fill bd-highlight col-example "> </div>
+            </div>
+          </div>
+          <div>
+            <div className="preferences">
+              <div style={{ textAlign: "center", width: "100%" }}>History</div>
+            </div>
+
+            <div className="audios pl-2">Audios</div>
+            <div className="d-flex flex-row" style={{ marginTop: "16px" }}>
+              <div
+                className="p-2"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  marginTop: "16px",
+                  width: "100px",
+                  height: "35px",
+                  marginLeft: "16px",
+                  background:
+                    "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
+                  borderRadius: "25px",
+                }}
+              >
+                <div
+                  className="date1"
+                  style={{
+                    width: "100%",
+                    textAlign: "center",
+                    marginLeft: "25%",
+                  }}
+                >
+                  Liked
+                </div>
+              </div>
+              <div
+                className="p-2"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginTop: "16px",
+                  width: "100px",
+                  height: "35px",
+                  border: "1px solid #5B86E5",
+                  borderRadius: "25px",
+                  marginLeft: "18px",
+                  textAlign: "center",
+                }}
+              >
+                <div
+                  className="date2"
+                  style={{
+                    width: "100%",
+                    textAlign: "center",
+                    marginLeft: "50%",
+                  }}
+                >
+                  Played
                 </div>
               </div>
             </div>
-            <div>
-              <div className="preferences">
-                <div style={{ textAlign: "center", width: "100%" }}>
-                  History
-                </div>
-              </div>
 
-              <div className="audios pl-2">Audios</div>
-              <div className="d-flex flex-row" style={{ marginTop: "16px" }}>
-                <div
-                  className="p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    marginLeft: "16px",
-                    background:
-                      "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
-                    borderRadius: "25px",
-                  }}
-                >
-                  <div
-                    className="date1"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "25%",
-                    }}
-                  >
-                    Liked
-                  </div>
-                </div>
-                <div
-                  className="p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    border: "1px solid #5B86E5",
-                    borderRadius: "25px",
-                    marginLeft: "18px",
-                    textAlign: "center",
-                  }}
-                >
-                  <div
-                    className="date2"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "50%",
-                    }}
-                  >
-                    Played
-                  </div>
-                </div>
-              </div>
-                           
             <Carousel
-  additionalTransfrom={0}
-  arrows
-  autoPlaySpeed={3000}
-  centerMode={false}
-  className=""
-  containerClass="container-with-dots"
-  dotListClass=""
-  draggable
-  focusOnSelect={false}
-  infinite
-  itemClass=""
-  keyBoardControl
-  minimumTouchDrag={80}
-  renderButtonGroupOutside={false}
-  renderDotsOutside={false}
-  responsive={{
-    desktop: {
-      breakpoint: {
-        max: 3000,
-        min: 1024
-      },
-      items: 2,
-      partialVisibilityGutter: 40
-    },
-    mobile: {
-      breakpoint: {
-        max: 464,
-        min: 0
-      },
-      items: 2,
-      partialVisibilityGutter: 30
-    },
-    tablet: {
-      breakpoint: {
-        max: 1024,
-        min: 464
-      },
-      items: 2,
-      partialVisibilityGutter: 30
-    }
-  }}
-  showDots={false}
-  sliderClass=""
-  slidesToSlide={1}
-  swipeable
->
-  <div className="cardPosition"> <div className="cards">
-  <div className="Bbox">
-                      <h3>
-                        <i
-                          class="fas fa-play"
-                          style={{ color: "white" }}
-                          color="white"
-                        ></i>
-                      </h3>
-                    </div>
-                    <div className="audiosLabel pl-1">Music for kids</div>
-                </div></div>
-                <div  className="cardPosition"> <div className="cards">
-                <div className="Pbox">
-                      <h3>
-                        <i
-                          class="fas fa-play"
-                          style={{ color: "white" }}
-                          color="white"
-                        ></i>
-                      </h3>
-                    </div>
-                    <div className="audiosLabel pl-1">Music for kids</div>                </div></div>
-                    <div className="cardPosition"> <div className="cards">
-  <div className="Bbox">
-                      <h3>
-                        <i
-                          class="fas fa-play"
-                          style={{ color: "white" }}
-                          color="white"
-                        ></i>
-                      </h3>
-                    </div>
-                    <div className="audiosLabel pl-1">Music for kids</div>
-                </div></div>
-                <div  className="cardPosition"> <div className="cards">
-                <div className="Pbox">
-                      <h3>
-                        <i
-                          class="fas fa-play"
-                          style={{ color: "white" }}
-                          color="white"
-                        ></i>
-                      </h3>
-                    </div>
-                    <div className="audiosLabel pl-1">Music for kids</div>                </div></div>
-</Carousel>; </div>
-          <div className="fullscreenFormat ">
-            <div>
-              <div className="audios pl-2">Personalised</div>
-              <div className="d-flex flex-row" style={{ marginTop: "16px" }}>
-                <div
-                  className="p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    marginLeft: "16px",
-                    background:
-                      "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
-                    borderRadius: "25px",
-                  }}
-                >
-                  <div
-                    className="date1"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "6%",
-                    }}
-                  >
-                    Appointments
+              additionalTransfrom={0}
+              arrows
+              autoPlaySpeed={3000}
+              centerMode={false}
+              className=""
+              containerClass="container-with-dots"
+              dotListClass=""
+              draggable
+              focusOnSelect={false}
+              infinite
+              itemClass=""
+              keyBoardControl
+              minimumTouchDrag={80}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              responsive={{
+                desktop: {
+                  breakpoint: {
+                    max: 3000,
+                    min: 1024,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 40,
+                },
+                mobile: {
+                  breakpoint: {
+                    max: 464,
+                    min: 0,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 30,
+                },
+                tablet: {
+                  breakpoint: {
+                    max: 1024,
+                    min: 464,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 30,
+                },
+              }}
+              showDots={false}
+              sliderClass=""
+              slidesToSlide={1}
+              swipeable
+            >
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Bbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
                   </div>
-                </div>
-                <div
-                  className="p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    border: "1px solid #5B86E5",
-                    borderRadius: "25px",
-                    marginLeft: "18px",
-                    textAlign: "center",
-                  }}
-                >
-                  <div
-                    className="date2"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "50%",
-                    }}
-                  >
-                    Liked
-                  </div>
+                  <div className="audiosLabel pl-1">Music for kids</div>
                 </div>
               </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Pbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
+                  </div>
+                  <div className="audiosLabel pl-1">Music for kids</div>{" "}
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Bbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
+                  </div>
+                  <div className="audiosLabel pl-1">Music for kids</div>
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Pbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
+                  </div>
+                  <div className="audiosLabel pl-1">Music for kids</div>{" "}
+                </div>
+              </div>
+            </Carousel>
+          </div>
+
+          <div>
+            <div className="audios pl-2">Personalised</div>
+            <div className="d-flex flex-row" style={{ marginTop: "16px" }}>
               <div
+                className="p-2"
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  justifyContent: "spaceBetween",
+                  marginTop: "16px",
+                  width: "100px",
+                  height: "35px",
+                  marginLeft: "16px",
+                  background:
+                    "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
+                  borderRadius: "25px",
                 }}
               >
-                <div className="d-flex bd-highlight example-parent">
-                  <div className="p-2 flex-fill bd-highlight col-example">
-                    <div className="Bbox">
-                      <h3>
-                        <i
-                          class="fas fa-play"
-                          style={{ color: "white" }}
-                          color="white"
-                        ></i>
-                      </h3>
-                    </div>
-                    <div className="Tstyling pl-1 ">
-                      <div className="t1">Yoga Teacher :</div>
-                      <div className="t2">
-                        <b> Andy Allen</b>
-                      </div>
-                      <div className="t3"> 5:00 PM - Mon, Jun 15</div>
-                      <div className="t4">
-                        <i
-                          style={{ color: "orange" }}
-                          class="fas fa-calendar-alt"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-2 flex-fill bd-highlight col-example">
-                    {" "}
-                    <div className="Pbox">
-                      <h3>
-                        <i
-                          class="fas fa-play"
-                          style={{ color: "white" }}
-                          color="white"
-                        ></i>
-                      </h3>
-                    </div>
-                    <div className="Tstyling pl-3">
-                      <div className="t1">Yoga Teacher :</div>
-                      <div className="t2">
-                        <b> Mandy Mallen</b>
-                      </div>
-                      <div className="t3"> 5:00 PM - Mon, Jun 15</div>
-                      <div className="t4">
-                        <i
-                          style={{ color: "orange" }}
-                          class="fas fa-calendar-alt"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="fullscreenFormat">
-            <div>
-              <div className="audios pl-2">Courses</div>
-              <div className="d-flex flex-row" style={{ marginTop: "16px" }}>
                 <div
-                  className="p-2"
+                  className="date1"
                   style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    marginLeft: "16px",
-                    background:
-                      "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
-                    borderRadius: "25px",
-                  }}
-                >
-                  <div
-                    className="date1"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "12%",
-                    }}
-                  >
-                    Completed
-                  </div>
-                </div>
-                <div
-                  className="p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    border: "1px solid #5B86E5",
-                    borderRadius: "25px",
-                    marginLeft: "18px",
+                    width: "100%",
                     textAlign: "center",
+                    marginLeft: "6%",
                   }}
                 >
-                  <div
-                    className="date2"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "50%",
-                    }}
-                  >
-                    Liked
-                  </div>
+                  Appointments
                 </div>
               </div>
               <div
+                className="p-2"
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  justifyContent: "spaceAround",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginTop: "16px",
+                  width: "100px",
+                  height: "35px",
+                  border: "1px solid #5B86E5",
+                  borderRadius: "25px",
+                  marginLeft: "18px",
+                  textAlign: "center",
                 }}
               >
-                <div className="d-flex bd-highlight example-parent">
-                  <div className="p-2 flex-fill bd-highlight col-example">
-                    <div className="Bbox">
-                      <h3>
-                        <i
-                          class="fas fa-play"
-                          style={{ color: "white" }}
-                          color="white"
-                        ></i>
-                      </h3>
-                    </div>
-                    <div className="Tstyling pl-1">
-                      <div className="t1">Courses timing :</div>
-                      <div className="t3"> 5:00 PM - Mon, Jun 15</div>
-                      <div className="t4">
-                        <i
-                          style={{ color: "orange" }}
-                          class="fas fa-calendar-alt"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-2 flex-fill bd-highlight col-example">
-                    {" "}
-                    <div className="Pbox">
-                      <h3>
-                        <i
-                          class="fas fa-play"
-                          style={{ color: "white" }}
-                          color="white"
-                        ></i>
-                      </h3>
-                    </div>
-                    <div className="Tstyling pl-3">
-                      <div className="t1">Courses timing :</div>
-                      <div className="t3"> 5:00 PM - Mon, Jun 15</div>
-                      <div className="t4">
-                        <i
-                          style={{ color: "orange" }}
-                          class="fas fa-calendar-alt"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
+                <div
+                  className="date2"
+                  style={{
+                    width: "100%",
+                    textAlign: "center",
+                    marginLeft: "50%",
+                  }}
+                >
+                  Liked
                 </div>
               </div>
             </div>
+            <Carousel
+              additionalTransfrom={0}
+              arrows
+              autoPlaySpeed={3000}
+              centerMode={false}
+              className=""
+              containerClass="container-with-dots"
+              dotListClass=""
+              draggable
+              focusOnSelect={false}
+              infinite
+              itemClass=""
+              keyBoardControl
+              minimumTouchDrag={80}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              responsive={{
+                desktop: {
+                  breakpoint: {
+                    max: 3000,
+                    min: 1024,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 40,
+                },
+                mobile: {
+                  breakpoint: {
+                    max: 464,
+                    min: 0,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 30,
+                },
+                tablet: {
+                  breakpoint: {
+                    max: 1024,
+                    min: 464,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 30,
+                },
+              }}
+              showDots={false}
+              sliderClass=""
+              slidesToSlide={1}
+              swipeable
+            >
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Bbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
+                  </div>
+                  <div className="Tstyling">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Andy Allen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Pbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
+                  </div>
+                  <div className="Tstyling">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Mandy Mallen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>{" "}
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Bbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
+                  </div>
+                  <div className="Tstyling">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Andy Allen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Pbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
+                  </div>
+                  <div className="Tstyling">
+                    <div className="t1">Yoga Teacher :</div>
+                    <div className="t2">
+                      <b> Mandy Mallen</b>
+                    </div>
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Carousel>
           </div>
+
+          <div>
+            <div className="audios pl-2">Courses</div>
+            <div className="d-flex flex-row" style={{ marginTop: "16px" }}>
+              <div
+                className="p-2"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  marginTop: "16px",
+                  width: "100px",
+                  height: "35px",
+                  marginLeft: "16px",
+                  background:
+                    "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
+                  borderRadius: "25px",
+                }}
+              >
+                <div
+                  className="date1"
+                  style={{
+                    width: "100%",
+                    textAlign: "center",
+                    marginLeft: "12%",
+                  }}
+                >
+                  Completed
+                </div>
+              </div>
+              <div
+                className="p-2"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginTop: "16px",
+                  width: "100px",
+                  height: "35px",
+                  border: "1px solid #5B86E5",
+                  borderRadius: "25px",
+                  marginLeft: "18px",
+                  textAlign: "center",
+                }}
+              >
+                <div
+                  className="date2"
+                  style={{
+                    width: "100%",
+                    textAlign: "center",
+                    marginLeft: "50%",
+                  }}
+                >
+                  Liked
+                </div>
+              </div>
+            </div>
+            <Carousel
+              additionalTransfrom={0}
+              arrows
+              autoPlaySpeed={3000}
+              centerMode={false}
+              className=""
+              containerClass="container-with-dots"
+              dotListClass=""
+              draggable
+              focusOnSelect={false}
+              infinite
+              itemClass=""
+              keyBoardControl
+              minimumTouchDrag={80}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              responsive={{
+                desktop: {
+                  breakpoint: {
+                    max: 3000,
+                    min: 1024,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 40,
+                },
+                mobile: {
+                  breakpoint: {
+                    max: 464,
+                    min: 0,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 30,
+                },
+                tablet: {
+                  breakpoint: {
+                    max: 1024,
+                    min: 464,
+                  },
+                  items: 2,
+                  partialVisibilityGutter: 30,
+                },
+              }}
+              showDots={false}
+              sliderClass=""
+              slidesToSlide={1}
+              swipeable
+            >
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Bbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Course Timings :</div>
+
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Pbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Course Timings :</div>
+
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>{" "}
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Bbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Course Timings :</div>
+
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="cardPosition">
+                {" "}
+                <div className="cards">
+                  <div className="Pbox">
+                    <h3>
+                      <i
+                        class="fas fa-play"
+                        style={{ color: "white" }}
+                        color="white"
+                      ></i>
+                    </h3>
+                  </div>
+                  <div className="Tstyling ">
+                    <div className="t1">Course Timings :</div>
+
+                    <div className="t3"> 5:00 PM - Mon, Jun 15</div>
+                    <div className="t4">
+                      <i
+                        style={{ color: "orange" }}
+                        class="fas fa-calendar-alt"
+                      ></i>
+                    </div>
+                  </div>{" "}
+                </div>
+              </div>
+            </Carousel>
+          </div>
+
           <div className="fullscreenFormat">
-            <div>
-              <div className="audios pl-2">YogaStudio</div>
-              <div className="d-flex flex-row" style={{ marginTop: "8px" }}>
-                <div
-                  className="p-2"
+            <div style={{ width: "100%" }}>
+              <Accordion defaultActiveKey="0" className="mt-3">
+                <Card
                   style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    marginLeft: "16px",
-                    background:
-                      "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
-                    borderRadius: "25px",
+                    fontWeight: "0px",
+                    boxShadow: "0 2px 5px 0 white",
+                    border: "0px solid rgba(0,0,0,.125)",
                   }}
                 >
-                  <div
-                    className="date1"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "25%",
-                    }}
-                  >
-                    Joined
-                  </div>
-                </div>
+                  <Card.Header onClick={openClose1} className="w-100 p-0">
+                    <Accordion.Toggle
+                      className="pl-2 "
+                      as={Card.Header}
+                      style={{
+                        backgroundColor: "white",
+                        borderBottom: " 0px solid rgba(0,0,0,.125)",
+                      }}
+                      eventKey="0"
+                    >
+                      <div className="audios2">
+                        <div>Yoga Studio</div>
+                        {Open1 == true ? (
+                          <MDBIcon icon="angle-up fa-lg " />
+                        ) : (
+                          <MDBIcon icon="angle-down fa-lg " />
+                        )}
+                      </div>
+                    </Accordion.Toggle>
+                  </Card.Header>
+                  <Accordion.Collapse eventKey="0">
+                    <Card.Body className="w-100 pl-0">
+                      {" "}
+                      <div
+                        className="d-flex flex-row"
+                        style={{ marginTop: "3px" }}
+                      >
+                        <div
+                          className="p-2"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            marginTop: "0px",
+                            width: "100px",
+                            height: "35px",
+                            marginLeft: "16px",
+                            background:
+                              "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
+                            borderRadius: "25px",
+                          }}
+                        >
+                          <div
+                            className="date1"
+                            style={{
+                              width: "100%",
+                              textAlign: "center",
+                              marginLeft: "25%",
+                            }}
+                          >
+                            Joined
+                          </div>
+                        </div>
 
-                <div
-                  className=" p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "4px 14px",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    border: "1px solid #5B86E5",
-                    borderRadius: "25px",
-                    marginLeft: "18px",
-                    textAlign: "center",
-                  }}
-                >
-                  <div
-                    className="date2"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "50%",
-                    }}
-                  >
-                    Liked
-                  </div>
-                </div>
-              </div>
-              <div className="cardList">
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                  }}
-                >
-                  <img
-                    height="100"
-                    style={{
-                      marginBottom: "16px",
-                      marginTop: "16px",
-                      borderRadius: "13px",
-                    }}
-                    src="https://s3-alpha-sig.figma.com/img/9f82/e6d9/7588a6a32d3c2b986c005966215ae474?Expires=1598227200&Signature=Jf2x6bvroP62CE2dcMAXFkdw8IGhXvDfhd0aLEIUPA2U367Pk--u-uFH96iZXhl4rf6PXtdk3IXFm-5SwsACUkpcLhM6fPZa7dqSqeLr7shxlz62QTaKob1Pj0NTG8ojdD5wsggoNgFbHPSv8XYMpQ44iy0k0BggHvwskZ5paCIWcJeHqkC5qtrdorTZArG4MQ0O8j~LC81plFBVIwKBW7E1LNiJNq2IUf4iWaaIFHIQoJk6o2mGJShjBV3KXgFZs3TV3FuiZAc0bR6kLZDFvB25-B8G74qolaGKbcwFikiExRJJhIKHJfqeq90kby-Lj8z18oQhG4SYkX45~k0qxw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                  ></img>
-                  <div className="imgTit">studio</div>
-                </div>
+                        <div
+                          className=" p-2"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            padding: "4px 14px",
+                            marginTop: "0px",
+                            width: "100px",
+                            height: "35px",
+                            border: "1px solid #5B86E5",
+                            borderRadius: "25px",
+                            marginLeft: "18px",
+                            textAlign: "center",
+                          }}
+                        >
+                          <div
+                            className="date2"
+                            style={{
+                              width: "100%",
+                              textAlign: "center",
+                              marginLeft: "50%",
+                            }}
+                          >
+                            Liked
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cardList">
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <img
+                            height="100"
+                            style={{
+                              marginBottom: "16px",
+                              marginTop: "16px",
+                              borderRadius: "13px",
+                            }}
+                            src="https://s3-alpha-sig.figma.com/img/9f82/e6d9/7588a6a32d3c2b986c005966215ae474?Expires=1598227200&Signature=Jf2x6bvroP62CE2dcMAXFkdw8IGhXvDfhd0aLEIUPA2U367Pk--u-uFH96iZXhl4rf6PXtdk3IXFm-5SwsACUkpcLhM6fPZa7dqSqeLr7shxlz62QTaKob1Pj0NTG8ojdD5wsggoNgFbHPSv8XYMpQ44iy0k0BggHvwskZ5paCIWcJeHqkC5qtrdorTZArG4MQ0O8j~LC81plFBVIwKBW7E1LNiJNq2IUf4iWaaIFHIQoJk6o2mGJShjBV3KXgFZs3TV3FuiZAc0bR6kLZDFvB25-B8G74qolaGKbcwFikiExRJJhIKHJfqeq90kby-Lj8z18oQhG4SYkX45~k0qxw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                          ></img>
+                          <div className="imgTit">studio</div>
+                        </div>
 
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                  }}
-                >
-                  <img
-                    height="100"
-                    style={{
-                      marginBottom: "16px",
-                      marginTop: "16px",
-                      borderRadius: "13px",
-                    }}
-                    src="https://s3-alpha-sig.figma.com/img/9f82/e6d9/7588a6a32d3c2b986c005966215ae474?Expires=1598227200&Signature=Jf2x6bvroP62CE2dcMAXFkdw8IGhXvDfhd0aLEIUPA2U367Pk--u-uFH96iZXhl4rf6PXtdk3IXFm-5SwsACUkpcLhM6fPZa7dqSqeLr7shxlz62QTaKob1Pj0NTG8ojdD5wsggoNgFbHPSv8XYMpQ44iy0k0BggHvwskZ5paCIWcJeHqkC5qtrdorTZArG4MQ0O8j~LC81plFBVIwKBW7E1LNiJNq2IUf4iWaaIFHIQoJk6o2mGJShjBV3KXgFZs3TV3FuiZAc0bR6kLZDFvB25-B8G74qolaGKbcwFikiExRJJhIKHJfqeq90kby-Lj8z18oQhG4SYkX45~k0qxw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                  ></img>
-                  <div className="imgTit">studio</div>
-                </div>
-              </div>
-              <div className="audios pl-2" style={{ width: "maxContent" }}>
-                Foodie
-              </div>
-              <div className="d-flex flex-row" style={{ marginTop: "8px" }}>
-                <div
-                  className="p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    marginLeft: "0px",
-                    background:
-                      "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
-                    borderRadius: "25px",
-                  }}
-                >
-                  <div
-                    className="date1"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "15%",
-                    }}
-                  >
-                    Purchased
-                  </div>
-                </div>
-                <div
-                  className="p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "4px 14px",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    border: "1px solid #5B86E5",
-                    borderRadius: "25px",
-                    marginLeft: "18px",
-                    textAlign: "center",
-                  }}
-                >
-                  <div
-                    className="date2"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "50%",
-                    }}
-                  >
-                    Liked
-                  </div>
-                </div>
-              </div>
-              <div className="cardList">
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                  }}
-                >
-                  <img
-                    height="110"
-                    style={{
-                      marginBottom: "16px",
-                      marginTop: "16px",
-                      borderRadius: "13px",
-                    }}
-                    src="https://s3-alpha-sig.figma.com/img/d72b/b5a1/c2cfb26ebcce57bccf105aa2328feab9?Expires=1598227200&Signature=WUt8NeRkaMaV8D1lMrHJjlRKRH3Iz8K6dCvvSJ6UViev1uQgcUFdJLLjLMNMG0sXIob~LzCDORUXAOsPziQx8ryU-V2OzQeECYJ0sOk9cdSOweOhg7BsN418YIXyzx5ZNnOqAFBScO8pdv0b4864hnPO~Yn8d9NKwV54F7oaptK4u~oYKy3XJQhXEIs4~tq5Gx1s8HznPivVjsab0GOckzl1OySD5e~JV2~~XT30YqosFzFsyhd1i2fdzHQJ4gJjQ0-JsdSR1p9LFvbYe9~b6-FUDXSsJOOTHuUQhxjCHe9JbYPh443YxlHH-F7RyBRDJwQZtJebOqRbkArtqkc9Ow__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                  ></img>
-                  <div className="imgTit">item name</div>
-                </div>
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <img
+                            height="100"
+                            style={{
+                              marginBottom: "16px",
+                              marginTop: "16px",
+                              borderRadius: "13px",
+                            }}
+                            src="https://s3-alpha-sig.figma.com/img/9f82/e6d9/7588a6a32d3c2b986c005966215ae474?Expires=1598227200&Signature=Jf2x6bvroP62CE2dcMAXFkdw8IGhXvDfhd0aLEIUPA2U367Pk--u-uFH96iZXhl4rf6PXtdk3IXFm-5SwsACUkpcLhM6fPZa7dqSqeLr7shxlz62QTaKob1Pj0NTG8ojdD5wsggoNgFbHPSv8XYMpQ44iy0k0BggHvwskZ5paCIWcJeHqkC5qtrdorTZArG4MQ0O8j~LC81plFBVIwKBW7E1LNiJNq2IUf4iWaaIFHIQoJk6o2mGJShjBV3KXgFZs3TV3FuiZAc0bR6kLZDFvB25-B8G74qolaGKbcwFikiExRJJhIKHJfqeq90kby-Lj8z18oQhG4SYkX45~k0qxw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                          ></img>
+                          <div className="imgTit">studio</div>
+                        </div>
+                      </div>
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              </Accordion>
 
-                <div
+              <Accordion defaultActiveKey="0" className="mt-3">
+                <Card
                   style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
+                    fontWeight: "0px",
+                    boxShadow: "0 2px 5px 0 white",
+                    border: "0px solid rgba(0,0,0,.125)",
                   }}
                 >
-                  <img
-                    height="110"
-                    style={{
-                      marginBottom: "16px",
-                      marginTop: "16px",
-                      borderRadius: "13px",
-                    }}
-                    src="https://s3-alpha-sig.figma.com/img/d72b/b5a1/c2cfb26ebcce57bccf105aa2328feab9?Expires=1598227200&Signature=WUt8NeRkaMaV8D1lMrHJjlRKRH3Iz8K6dCvvSJ6UViev1uQgcUFdJLLjLMNMG0sXIob~LzCDORUXAOsPziQx8ryU-V2OzQeECYJ0sOk9cdSOweOhg7BsN418YIXyzx5ZNnOqAFBScO8pdv0b4864hnPO~Yn8d9NKwV54F7oaptK4u~oYKy3XJQhXEIs4~tq5Gx1s8HznPivVjsab0GOckzl1OySD5e~JV2~~XT30YqosFzFsyhd1i2fdzHQJ4gJjQ0-JsdSR1p9LFvbYe9~b6-FUDXSsJOOTHuUQhxjCHe9JbYPh443YxlHH-F7RyBRDJwQZtJebOqRbkArtqkc9Ow__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                  ></img>
-                  <div className="imgTit">item name</div>
-                </div>
-              </div>
-              <div className="audios pl-2" style={{ width: "maxContent" }}>
-                Products
-              </div>
-              <div className="d-flex flex-row" style={{ marginTop: "8px" }}>
-                <div
-                  className="p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    marginLeft: "16px",
-                    background:
-                      "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
-                    borderRadius: "25px",
-                  }}
-                >
-                  <div
-                    className="date1"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "15%",
-                    }}
-                  >
-                    Purchased
-                  </div>
-                </div>
-                <div
-                  className="p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "4px 14px",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    border: "1px solid #5B86E5",
-                    borderRadius: "25px",
-                    marginLeft: "18px",
-                    textAlign: "center",
-                  }}
-                >
-                  <div
-                    className="date2"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "50%",
-                    }}
-                  >
-                    Liked
-                  </div>
-                </div>
-              </div>
-              <div className="cardList">
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                  }}
-                >
-                  <img
-                    height="92"
-                    style={{
-                      marginBottom: "16px",
-                      marginTop: "16px",
-                      borderRadius: "13px",
-                    }}
-                    src="https://s3-alpha-sig.figma.com/img/3fd1/6c51/6348f1b383c87c7549d2a61b5dd3eb33?Expires=1598227200&Signature=f1Mk5120MFWnvqNFLnT5atoUNBfGLQuhi6tcs1TsP88Dc7JD9UHZ7RsOWoZ5O6sUIDMbj0ArR97-qMco6~kc4gs7dupjSpIf8w1aDL2T5Xtb9lFIOK1BBzF7JjaMvt8aObk9SNkR4XdHkwvh06mjhNBwyLJCYVT8pdskBSSwaDSMWDv0aZ0xlV8Yds-2BVUjv5R2fL3i~zqlpyP6tgxCnlH9aI4qxyDmgpARUTuwvUdgE8-xLIf-Dvw8J7km0mRX1-RA-B7swhO0gXKoOIx8UPrErIJtfiZjVSIt2q1lvLqv1s2otoarFjyYxgMlhdKfU6bXQYSbVSOefJzaM1g8WA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                  ></img>
-                  <div className="imgTit">Name of Product</div>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                  }}
-                >
-                  <img
-                    height="92"
-                    style={{
-                      marginBottom: "16px",
-                      marginTop: "16px",
-                      borderRadius: "13px",
-                    }}
-                    src="https://s3-alpha-sig.figma.com/img/3fd1/6c51/6348f1b383c87c7549d2a61b5dd3eb33?Expires=1598227200&Signature=f1Mk5120MFWnvqNFLnT5atoUNBfGLQuhi6tcs1TsP88Dc7JD9UHZ7RsOWoZ5O6sUIDMbj0ArR97-qMco6~kc4gs7dupjSpIf8w1aDL2T5Xtb9lFIOK1BBzF7JjaMvt8aObk9SNkR4XdHkwvh06mjhNBwyLJCYVT8pdskBSSwaDSMWDv0aZ0xlV8Yds-2BVUjv5R2fL3i~zqlpyP6tgxCnlH9aI4qxyDmgpARUTuwvUdgE8-xLIf-Dvw8J7km0mRX1-RA-B7swhO0gXKoOIx8UPrErIJtfiZjVSIt2q1lvLqv1s2otoarFjyYxgMlhdKfU6bXQYSbVSOefJzaM1g8WA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                  ></img>
-                  <div className="imgTit">Name of Product</div>
-                </div>
-              </div>
-              <div className="audios pl-2" style={{ width: "maxContent" }}>
-                Restaurant
-              </div>
-              <div className="d-flex flex-row" style={{ marginTop: "8px" }}>
-                <div
-                  className="p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    marginLeft: "16px",
-                    background:
-                      "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
-                    borderRadius: "25px",
-                  }}
-                >
-                  <div
-                    className="date1"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "15%",
-                    }}
-                  >
-                    Purchased
-                  </div>
-                </div>
-                <div
-                  className="p-2"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "4px 14px",
-                    marginTop: "16px",
-                    width: "100px",
-                    height: "35px",
-                    border: "1px solid #5B86E5",
-                    borderRadius: "25px",
-                    marginLeft: "18px",
-                    textAlign: "center",
-                  }}
-                >
-                  <div
-                    className="date2"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      marginLeft: "50%",
-                    }}
-                  >
-                    Liked
-                  </div>
-                </div>
-              </div>
-              <div className="cardList">
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                  }}
-                >
-                  <img
-                    height="110"
-                    style={{
-                      marginBottom: "16px",
-                      marginTop: "16px",
-                      borderRadius: "13px",
-                    }}
-                    src="https://s3-alpha-sig.figma.com/img/419d/eb9c/a75b535fe9af4ce479e5c58f0528faf0?Expires=1598227200&Signature=R4mQy235oz29ai8p6cEY50vGD5mMQdX3kHElt5neEzGJr8hetLQ-CwmE-WPcGPJymYUWhBMwg3kjK20qnEDVIAwYSoG5BriCb8uX9IXTluRC86mGngm7qo0oCbDOOWmqAARtfZz-a9oavvUHikMKf7fiLlKEXvMQCtkSo3GPnxEUsm-yDrgfg3eVsLeV6E5PxxB-XXsCj-PHoL918huWKWW-1d44LOfR8uR05CBxzG5M8OCNXBbv4jjRJpmOafcm0pCxGETWOaNV6KYaVj-84F4ecCaErKCtz0OaEwYrN7MD6Pyj8-QoKSquHEplQNU5JWAK6Y~EBSe1n2gIuUUGmA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                  ></img>
-                  <div className="imgTit">Restaurant name</div>
-                </div>
+                  <Card.Header onClick={openClose2} className="w-100 p-0">
+                    <Accordion.Toggle
+                      className="pl-2 "
+                      as={Card.Header}
+                      style={{
+                        backgroundColor: "white",
+                        borderBottom: " 0px solid rgba(0,0,0,.125)",
+                      }}
+                      eventKey="0"
+                    >
+                      <div className="audios2">
+                        <div> Foodie</div>
+                        {Open2 == true ? (
+                          <MDBIcon icon="angle-up fa-lg " />
+                        ) : (
+                          <MDBIcon icon="angle-down fa-lg " />
+                        )}
+                      </div>
+                    </Accordion.Toggle>
+                  </Card.Header>
+                  <Accordion.Collapse eventKey="0">
+                    <Card.Body className="w-100 pl-0">
+                      <div
+                        className="d-flex flex-row"
+                        style={{ marginTop: "3px" }}
+                      >
+                        <div
+                          className="p-2"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            marginTop: "16px",
+                            width: "100px",
+                            height: "35px",
+                            marginLeft: "15px",
+                            background:
+                              "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
+                            borderRadius: "25px",
+                          }}
+                        >
+                          <div
+                            className="date1"
+                            style={{
+                              width: "100%",
+                              textAlign: "center",
+                              marginLeft: "15%",
+                            }}
+                          >
+                            Purchased
+                          </div>
+                        </div>
 
-                <div
+                        <div
+                          className="p-2"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            padding: "4px 14px",
+                            marginTop: "16px",
+                            width: "100px",
+                            height: "35px",
+                            border: "1px solid #5B86E5",
+                            borderRadius: "25px",
+                            marginLeft: "18px",
+                            textAlign: "center",
+                          }}
+                        >
+                          <div
+                            className="date2"
+                            style={{
+                              width: "100%",
+                              textAlign: "center",
+                              marginLeft: "50%",
+                            }}
+                          >
+                            Liked
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cardList">
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <img
+                            height="100"
+                            style={{
+                              marginBottom: "16px",
+                              marginTop: "16px",
+                              borderRadius: "13px",
+                            }}
+                            src="https://s3-alpha-sig.figma.com/img/d72b/b5a1/c2cfb26ebcce57bccf105aa2328feab9?Expires=1598227200&Signature=WUt8NeRkaMaV8D1lMrHJjlRKRH3Iz8K6dCvvSJ6UViev1uQgcUFdJLLjLMNMG0sXIob~LzCDORUXAOsPziQx8ryU-V2OzQeECYJ0sOk9cdSOweOhg7BsN418YIXyzx5ZNnOqAFBScO8pdv0b4864hnPO~Yn8d9NKwV54F7oaptK4u~oYKy3XJQhXEIs4~tq5Gx1s8HznPivVjsab0GOckzl1OySD5e~JV2~~XT30YqosFzFsyhd1i2fdzHQJ4gJjQ0-JsdSR1p9LFvbYe9~b6-FUDXSsJOOTHuUQhxjCHe9JbYPh443YxlHH-F7RyBRDJwQZtJebOqRbkArtqkc9Ow__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                          ></img>
+                          <div className="imgTit">Item Name</div>
+                        </div>
+
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <img
+                            height="100"
+                            style={{
+                              marginBottom: "16px",
+                              marginTop: "16px",
+                              borderRadius: "13px",
+                            }}
+                            src="https://s3-alpha-sig.figma.com/img/d72b/b5a1/c2cfb26ebcce57bccf105aa2328feab9?Expires=1598227200&Signature=WUt8NeRkaMaV8D1lMrHJjlRKRH3Iz8K6dCvvSJ6UViev1uQgcUFdJLLjLMNMG0sXIob~LzCDORUXAOsPziQx8ryU-V2OzQeECYJ0sOk9cdSOweOhg7BsN418YIXyzx5ZNnOqAFBScO8pdv0b4864hnPO~Yn8d9NKwV54F7oaptK4u~oYKy3XJQhXEIs4~tq5Gx1s8HznPivVjsab0GOckzl1OySD5e~JV2~~XT30YqosFzFsyhd1i2fdzHQJ4gJjQ0-JsdSR1p9LFvbYe9~b6-FUDXSsJOOTHuUQhxjCHe9JbYPh443YxlHH-F7RyBRDJwQZtJebOqRbkArtqkc9Ow__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                          ></img>
+                          <div className="imgTit">Item Name</div>
+                        </div>
+                      </div>
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              </Accordion>
+
+              <Accordion defaultActiveKey="0" className="mt-3">
+                <Card
                   style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
+                    fontWeight: "0px",
+                    boxShadow: "0 2px 5px 0 white",
+                    border: "0px solid rgba(0,0,0,.125)",
                   }}
                 >
-                  <img
-                    height="110"
-                    className="imgStudio2"
-                    style={{
-                      marginBottom: "16px",
-                      marginTop: "16px",
-                      borderRadius: "13px",
-                    }}
-                    src="https://s3-alpha-sig.figma.com/img/419d/eb9c/a75b535fe9af4ce479e5c58f0528faf0?Expires=1598227200&Signature=R4mQy235oz29ai8p6cEY50vGD5mMQdX3kHElt5neEzGJr8hetLQ-CwmE-WPcGPJymYUWhBMwg3kjK20qnEDVIAwYSoG5BriCb8uX9IXTluRC86mGngm7qo0oCbDOOWmqAARtfZz-a9oavvUHikMKf7fiLlKEXvMQCtkSo3GPnxEUsm-yDrgfg3eVsLeV6E5PxxB-XXsCj-PHoL918huWKWW-1d44LOfR8uR05CBxzG5M8OCNXBbv4jjRJpmOafcm0pCxGETWOaNV6KYaVj-84F4ecCaErKCtz0OaEwYrN7MD6Pyj8-QoKSquHEplQNU5JWAK6Y~EBSe1n2gIuUUGmA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                  ></img>
-                  <div className="imgTit">Restaurant name</div>
-                </div>
-              </div>
+                  <Card.Header onClick={openClose3} className="w-100 p-0">
+                    <Accordion.Toggle
+                      className="pl-2 "
+                      as={Card.Header}
+                      style={{
+                        backgroundColor: "white",
+                        borderBottom: " 0px solid rgba(0,0,0,.125)",
+                      }}
+                      eventKey="0"
+                    >
+                      <div className="audios2">
+                        <div>Products</div>
+                        {Open3 == true ? (
+                          <MDBIcon icon="angle-up fa-lg " />
+                        ) : (
+                          <MDBIcon icon="angle-down fa-lg " />
+                        )}
+                      </div>
+                    </Accordion.Toggle>
+                  </Card.Header>
+                  <Accordion.Collapse eventKey="0">
+                    <Card.Body className="w-100 pl-0">
+                      <div
+                        className="d-flex flex-row"
+                        style={{ marginTop: "3px" }}
+                      >
+                        <div
+                          className="p-2"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            marginTop: "16px",
+                            width: "100px",
+                            height: "35px",
+                            marginLeft: "15px",
+                            background:
+                              "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
+                            borderRadius: "25px",
+                          }}
+                        >
+                          <div
+                            className="date1"
+                            style={{
+                              width: "100%",
+                              textAlign: "center",
+                              marginLeft: "15%",
+                            }}
+                          >
+                            Purchased
+                          </div>
+                        </div>
+
+                        <div
+                          className="p-2"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            padding: "4px 14px",
+                            marginTop: "16px",
+                            width: "100px",
+                            height: "35px",
+                            border: "1px solid #5B86E5",
+                            borderRadius: "25px",
+                            marginLeft: "18px",
+                            textAlign: "center",
+                          }}
+                        >
+                          <div
+                            className="date2"
+                            style={{
+                              width: "100%",
+                              textAlign: "center",
+                              marginLeft: "50%",
+                            }}
+                          >
+                            Liked
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cardList">
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <img
+                            height="100"
+                            style={{
+                              marginBottom: "16px",
+                              marginTop: "16px",
+                              borderRadius: "13px",
+                            }}
+                            src="https://s3-alpha-sig.figma.com/img/3fd1/6c51/6348f1b383c87c7549d2a61b5dd3eb33?Expires=1598227200&Signature=f1Mk5120MFWnvqNFLnT5atoUNBfGLQuhi6tcs1TsP88Dc7JD9UHZ7RsOWoZ5O6sUIDMbj0ArR97-qMco6~kc4gs7dupjSpIf8w1aDL2T5Xtb9lFIOK1BBzF7JjaMvt8aObk9SNkR4XdHkwvh06mjhNBwyLJCYVT8pdskBSSwaDSMWDv0aZ0xlV8Yds-2BVUjv5R2fL3i~zqlpyP6tgxCnlH9aI4qxyDmgpARUTuwvUdgE8-xLIf-Dvw8J7km0mRX1-RA-B7swhO0gXKoOIx8UPrErIJtfiZjVSIt2q1lvLqv1s2otoarFjyYxgMlhdKfU6bXQYSbVSOefJzaM1g8WA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                          ></img>
+                          <div className="imgTit">Name of Product</div>
+                        </div>
+
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <img
+                            height="100"
+                            style={{
+                              marginBottom: "16px",
+                              marginTop: "16px",
+                              borderRadius: "13px",
+                            }}
+                            src="https://s3-alpha-sig.figma.com/img/3fd1/6c51/6348f1b383c87c7549d2a61b5dd3eb33?Expires=1598227200&Signature=f1Mk5120MFWnvqNFLnT5atoUNBfGLQuhi6tcs1TsP88Dc7JD9UHZ7RsOWoZ5O6sUIDMbj0ArR97-qMco6~kc4gs7dupjSpIf8w1aDL2T5Xtb9lFIOK1BBzF7JjaMvt8aObk9SNkR4XdHkwvh06mjhNBwyLJCYVT8pdskBSSwaDSMWDv0aZ0xlV8Yds-2BVUjv5R2fL3i~zqlpyP6tgxCnlH9aI4qxyDmgpARUTuwvUdgE8-xLIf-Dvw8J7km0mRX1-RA-B7swhO0gXKoOIx8UPrErIJtfiZjVSIt2q1lvLqv1s2otoarFjyYxgMlhdKfU6bXQYSbVSOefJzaM1g8WA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                          ></img>
+                          <div className="imgTit">Name of Product</div>
+                        </div>
+                      </div>
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              </Accordion>
+
+              <Accordion defaultActiveKey="0" className="mt-3">
+                <Card
+                  style={{
+                    fontWeight: "0px",
+                    boxShadow: "0 2px 5px 0 white",
+                    border: "0px solid rgba(0,0,0,.125)",
+                  }}
+                >
+                  <Card.Header onClick={openClose4} className="w-100 p-0">
+                    <Accordion.Toggle
+                      className="pl-2 "
+                      as={Card.Header}
+                      style={{
+                        backgroundColor: "white",
+                        borderBottom: " 0px solid rgba(0,0,0,.125)",
+                      }}
+                      eventKey="0"
+                    >
+                      <div className="audios2">
+                        <div>Restaurants</div>
+                        {Open4 == true ? (
+                          <MDBIcon icon="angle-up fa-lg " />
+                        ) : (
+                          <MDBIcon icon="angle-down fa-lg " />
+                        )}
+                      </div>
+                    </Accordion.Toggle>
+                  </Card.Header>
+                  <Accordion.Collapse eventKey="0">
+                    <Card.Body className="w-100 pl-0">
+                      <div
+                        className="d-flex flex-row"
+                        style={{ marginTop: "3px" }}
+                      >
+                        <div
+                          className="p-2"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            marginTop: "16px",
+                            width: "100px",
+                            height: "35px",
+                            marginLeft: "15px",
+                            background:
+                              "linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%)",
+                            borderRadius: "25px",
+                          }}
+                        >
+                          <div
+                            className="date1"
+                            style={{
+                              width: "100%",
+                              textAlign: "center",
+                              marginLeft: "15%",
+                            }}
+                          >
+                            Purchased
+                          </div>
+                        </div>
+
+                        <div
+                          className="p-2"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            padding: "4px 14px",
+                            marginTop: "16px",
+                            width: "100px",
+                            height: "35px",
+                            border: "1px solid #5B86E5",
+                            borderRadius: "25px",
+                            marginLeft: "18px",
+                            textAlign: "center",
+                          }}
+                        >
+                          <div
+                            className="date2"
+                            style={{
+                              width: "100%",
+                              textAlign: "center",
+                              marginLeft: "50%",
+                            }}
+                          >
+                            Liked
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cardList">
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <img
+                            height="100"
+                            style={{
+                              marginBottom: "16px",
+                              marginTop: "16px",
+                              borderRadius: "13px",
+                            }}
+                            src="https://s3-alpha-sig.figma.com/img/419d/eb9c/a75b535fe9af4ce479e5c58f0528faf0?Expires=1598227200&Signature=R4mQy235oz29ai8p6cEY50vGD5mMQdX3kHElt5neEzGJr8hetLQ-CwmE-WPcGPJymYUWhBMwg3kjK20qnEDVIAwYSoG5BriCb8uX9IXTluRC86mGngm7qo0oCbDOOWmqAARtfZz-a9oavvUHikMKf7fiLlKEXvMQCtkSo3GPnxEUsm-yDrgfg3eVsLeV6E5PxxB-XXsCj-PHoL918huWKWW-1d44LOfR8uR05CBxzG5M8OCNXBbv4jjRJpmOafcm0pCxGETWOaNV6KYaVj-84F4ecCaErKCtz0OaEwYrN7MD6Pyj8-QoKSquHEplQNU5JWAK6Y~EBSe1n2gIuUUGmA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                          ></img>
+                          <div className="imgTit">Restaurant Name</div>
+                        </div>
+
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <img
+                            height="100"
+                            style={{
+                              marginBottom: "16px",
+                              marginTop: "16px",
+                              borderRadius: "13px",
+                            }}
+                            src="https://s3-alpha-sig.figma.com/img/419d/eb9c/a75b535fe9af4ce479e5c58f0528faf0?Expires=1598227200&Signature=R4mQy235oz29ai8p6cEY50vGD5mMQdX3kHElt5neEzGJr8hetLQ-CwmE-WPcGPJymYUWhBMwg3kjK20qnEDVIAwYSoG5BriCb8uX9IXTluRC86mGngm7qo0oCbDOOWmqAARtfZz-a9oavvUHikMKf7fiLlKEXvMQCtkSo3GPnxEUsm-yDrgfg3eVsLeV6E5PxxB-XXsCj-PHoL918huWKWW-1d44LOfR8uR05CBxzG5M8OCNXBbv4jjRJpmOafcm0pCxGETWOaNV6KYaVj-84F4ecCaErKCtz0OaEwYrN7MD6Pyj8-QoKSquHEplQNU5JWAK6Y~EBSe1n2gIuUUGmA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                          ></img>
+                          <div className="imgTit">Restaurant Name</div>
+                        </div>
+                      </div>
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              </Accordion>
             </div>
           </div>
           <div className="fullscreenFormat">
